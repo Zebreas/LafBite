@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kasir Toko Kue</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h2>Laf Bite</h2>
+      <button id="theme-toggle" onclick="toggleTheme()">🌙</button>
+    </header>
+
+    <label for="nama">Nama Pembeli:</label>
+    <input type="text" id="nama" placeholder="Masukkan nama pembeli" required /><br>
+
+    <label for="whatsapp">Nomor WhatsApp:</label>
+    <input type="text" id="whatsapp" placeholder="Masukkan nomor WhatsApp pembeli" required /><br>
+
+    <label for="search">Cari Menu:</label>
+    <input type="text" id="search" placeholder="Cari nama menu..." oninput="filterMenu()" />
+
+    <h3>Total Pembelian: <span id="total-pembelian">Rp 0</span></h3>
+
+    <table id="menu-table">
+      <thead>
+        <tr>
+          <th>Menu</th>
+          <th>Harga</th>
+          <th>Qty</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody id="menu-body"></tbody>
+    </table>
+
+    <button onclick="buatStruk()">Buat Struk</button>
+    <button onclick="resetForm()">Reset</button>
+
+    <div id="struk" class="struk-area" style="display: none;">
+      <h3>Toko Kue Manis</h3>
+      <p id="output"></p>
+      <button onclick="window.print()">Print</button>
+      <button onclick="kirimKeWhatsApp()">Kirim ke WhatsApp</button>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
