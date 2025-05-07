@@ -1,15 +1,12 @@
-// sheetWebhookURL : https://script.google.com/macros/s/AKfycbw6X-KIqYv-RcbXS_HZByikeYMGbEVBbKP7DIRuljpP9l38yjgpedTGKw1nem8OYw/exec
-// sheetMenu : https://script.google.com/macros/s/AKfycbx5VKze_z_0sfkoUJdStb2h6vKPA1TLFL2WuAtMi1G4fXSkmppp8h7OAqeF2wGu5Dwj/exec
-
 const menuBody = document.getElementById("menu-body");
 let menuItems = [];
 
 // URL Web App yang akan kita buat di Google Apps Script
-const sheetWebhookURL = "https://script.google.com/macros/s/AKfycbw6X-KIqYv-RcbXS_HZByikeYMGbEVBbKP7DIRuljpP9l38yjgpedTGKw1nem8OYw/exec";
+const sheetWebhookURL = "https://script.google.com/macros/s/AKfycbxr1-TOnGSa6a_91F-vcxS6c9DG4qTgfpfqXzOjZT7-88X-S6nE9Mvvxij1isZqQipAUA/exec";
 
 async function fetchMenuItems() {
   try {
-    const response = await fetch("https://script.google.com/macros/s/AKfycbx5VKze_z_0sfkoUJdStb2h6vKPA1TLFL2WuAtMi1G4fXSkmppp8h7OAqeF2wGu5Dwj/exec");
+    const response = await fetch("https://script.google.com/macros/s/AKfycbxr1-TOnGSa6a_91F-vcxS6c9DG4qTgfpfqXzOjZT7-88X-S6nE9Mvvxij1isZqQipAUA/exec");
     menuItems = await response.json();
 
     menuItems.forEach((item, index) => {
