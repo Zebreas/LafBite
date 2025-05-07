@@ -2,7 +2,7 @@ const menuBody = document.getElementById("menu-body");
 let menuItems = [];
 
 // URL Web App yang akan kita buat di Google Apps Script
-const sheetWebhookURL = "https://script.google.com/macros/s/AKfycbxt_NQm6TOy__MPc6Y71YYg2QwOpplzQRO2Vu8UEW1dmZsSmrexgLjzku7W-drZGPFcYw/exec";
+const sheetWebhookURL = "https://script.google.com/macros/s/AKfycbyDUSAnmdDHeIXWuoQ-vuWnbL_PstNN05v6S-q1p8zaihPEb4VThif4pfwanzQAjcp5NQ/exec";
 
 async function fetchMenuItems() {
   try {
